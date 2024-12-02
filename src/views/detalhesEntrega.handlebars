@@ -1,0 +1,32 @@
+<h2><i class="fas fa-info-circle"></i> Detalhes da Entrega</h2>
+
+{{#if entrega}}
+   <p><strong>ID:</strong> {{entrega.id}}</p>
+   <p><strong>Nome Cliente:</strong> {{entrega.cliente}}</p>
+   <p><strong>CEP:</strong> {{entrega.cep}}</p>
+   <p><strong>Rua:</strong> {{entrega.rua}}</p>
+   <p><strong>Número:</strong> {{entrega.numero}}</p>
+   <p><strong>Bairro:</strong> {{entrega.bairro}}</p>
+   <p><strong>Cidade:</strong> {{entrega.cidade}}</p>
+   <p><strong>Estado:</strong> {{entrega.estado}}</p>
+
+   <button onclick="excluirEntrega('{{entrega.id}}')" class="btn-delete"><i class="fas fa-trash-alt"></i> Excluir Entrega</button>
+{{else}}
+   <p>Entrega não encontrada.</p>
+{{/if}}
+
+
+<script>
+function excluirEntrega(id) {
+   if (confirm('Tem certeza que deseja excluir esta entrega?')) {
+       fetch(`/entrega/${id}`, { method: 'DELETE' })
+           .then(response => {
+               if (response.ok) {
+                   window.location.href = '/listarEntregas';
+               } else {
+                   alert('Erro ao excluir entrega');
+               }
+           });
+   }
+}
+</script>

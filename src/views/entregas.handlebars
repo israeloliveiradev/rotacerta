@@ -1,0 +1,14 @@
+<h2><i class="fas fa-list"></i> Lista de Entregas</h2>
+
+{{#if entregas.length}}
+   <ul>
+       {{#each entregas}}
+           <li>
+               ID: {{this.id}} - {{this.cliente}} - {{this.rua}}, {{this.numero}} - {{this.cidade}}/{{this.estado}}
+               <a href="/buscarEntrega?id={{this.id}}"><i class="fas fa-info-circle"></i> Detalhes</a>
+           </li>
+       {{/each}}
+   </ul>
+{{else}}
+   <p>Nenhuma entrega cadastrada.</p>
+{{/if}}

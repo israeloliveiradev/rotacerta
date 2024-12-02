@@ -1,0 +1,24 @@
+<h2><i class="fas fa-plus-circle"></i> Cadastro de Entrega</h2>
+
+<form action="/entrega" method="POST">
+
+    <label for="cliente">Cliente:</label>
+    <input type="text" id="cliente" name="cliente" required>
+
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" required>
+
+    <label for="numero">Número:</label>
+    <input type="text" id="numero" name="numero" required>
+
+    <button type="submit"><i class="fas fa-paper-plane"></i> Cadastrar</button>
+</form>
+
+<h2><i class="fas fa-search"></i> Buscar Entrega</h2>
+
+<form action="/buscarEntrega" method="GET">
+    <label for="id">ID da Entrega:</label>
+    <input type="text" id="id" name="id" required>
+
+    <button type="submit"><i class="fas fa-search"></i> Buscar</button>
+</form>

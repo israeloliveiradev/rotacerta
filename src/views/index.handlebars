@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Entrega</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Cadastro de Entrega</h1>
+  <form action="/entrega" method="POST">
+  <label for="cep">CEP:</label>
+    <input type="text" id="cliente" name="cliente" required>
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" required>
+
+    <label for="numeroCasa">Número da Casa:</label>
+    <input type="text" id="numeroCasa" name="numeroCasa" required>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+  <a href="/entregas">Ver todas as entregas</a>
+</body>
+</html>
